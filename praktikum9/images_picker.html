@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <label for="hewan">Hewan</label>
+  <select name="" id="hewan">
+    <option value="gorilla">Gorilla</option>
+    <option value="anjing">Anjing</option>
+    <option value="unicorn">Unicorn</option>
+    <option value="panda">Panda</option>
+  </select>
+  <button onclick="cetakGambar()">Cetak Gambar</button>
+
+  <img id="gambar" src="">
+
+  <script>
+
+    function cetakGambar(){
+      const hewan = document.getElementById('hewan');
+      const gambar = document.getElementById('gambar');
+
+      if (hewan.value === 'gorilla') {
+        gambar.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXIodIulZ2kfIl46QTar3O3pxzUU0ryRErqQ&usqp=CAU'
+      }
+
+      if (hewan.value === 'anjing') {
+        gambar.src = 'data:image/jpeg;base64,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'
+      }
+
+      if (hewan.value === 'unicorn') {
+        gambar.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI0Ym2BTJKMQgn53saTB751zeC0-pH_PuFsg&usqp=CAU'
+      }
+
+      if (hewan.value === 'panda') {
+        gambar.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO4Cf6Xb-7MgFcWgd2b6dIYBWXBh74oTbxDitkyOIyq7Lndx3N9Z5_6b1lxSfdVeywfyA&usqp=CAU'
+      }
+    }
+  </script>
+
+</body>
+</html>
